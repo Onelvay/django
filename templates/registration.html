@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+</head>
+<body>
+    <form method="POST" actions="register/">
+        {% csrf_token %}
+        <p>
+            <label>first name</label>
+            <input type="text" name="fname"/>    
+        </p>
+        <p>
+            <label>last name</label>
+            <input type="text" name="lname"/>    
+        </p>
+        <select name="way">
+            {% for inter in inters%}
+            <option>{{inter.heading.name}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Сохранить" >
+    </form>
+</body>
+</html>

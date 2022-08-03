@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internships</title>
+</head>
+<body>
+    <a href="/add">Добавить стажировку</a>
+    <h2>список стажировок</h2>
+    <div>
+        <a href="/register">Регистрация</a>
+        {%for inter in inters%}
+            
+            <h2>{{inter.heading.name}}</h2>
+            <h5>Дедлайн : {{inter.deadline}}</h5>
+            <h5>Информация: {{inter.information}}</h5>
+            <a href={{inter.link}}>ссылка</a>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Add List</title>
+</head>
+<body class="container">
+    <form method="POST" action="add/">
+        {% csrf_token %}
+        <p>
+            <label>Company</label><br>
+            <input type="text" name="name" />
+        </p>
+        <p>
+            <label>deadline</label><br>
+            <input type="date" name="data"
+       value="2022-01-01"
+       min="2022-01-01" max="2023-12-31">
+        </p>
+        <p>
+            <label>information</label><br>
+            <input type="text" name="info" />
+        </p>
+        <p>
+            <label>link</label><br>
+            <input type="url" name="link" />
+        </p>
+        <input type="submit" value="Сохранить" >
+    </form>
+    <a href="/">вернуться</a>
+</body>
+</html>
